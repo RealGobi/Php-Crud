@@ -1,0 +1,42 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body form label {
+  padding: .1rem;
+  margin: 0 .5rem;
+}
+
+body form input {
+  padding: .5rem;
+  margin: .5rem;
+}
+
+body form button {
+  margin: 0 .5rem;
+  padding: .2rem;
+  background: #329232;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

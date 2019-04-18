@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        label {
+            padding: .1rem;
+            margin: 0 .5rem;
+        }
+        input {
+            padding: .5rem;
+            margin: .5rem;
+        }
+        button {
+            margin: 0 .5rem;
+            padding: .2rem; 
+            background: rgb(50, 146, 50);
+            color: white;
+        }
+    }
+}
