@@ -14,3 +14,11 @@ if(isset($_POST['save'])){
     # skicka in i databasen
     $mysqli->query("INSERT INTO data (name, location) VALUES('$name', '$location')") or die($mysqli->error);
 }
+
+# har delete blivet tryckt?
+
+if(isset($_GET['delete'])){
+    $id = $_GET['delete'];
+    # tar bort från db
+    $mysqli->query("DELETE FROM data WHERE id=$id") or die($mysqli_error());
+}

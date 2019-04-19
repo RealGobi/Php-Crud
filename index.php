@@ -34,7 +34,10 @@ $result = $mysqli->query("SELECT * FROM data") or die($mysqli_error);
             <tr>
                 <td><?php echo $row['name'] ?></td>
                 <td><?php echo $row['location'] ?></td>
-                <td></td>
+                <td>
+                    <a href="index.php?edit=<?php echo $row['id'];?>" class="edit">Edit</a>
+                    <a href="index.php?delete=<?php echo $row['id'];?>" class="delete">Delete</a>
+                </td>
             </tr>
             <?php endwhile; ?>
         </table>

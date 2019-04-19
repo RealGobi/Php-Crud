@@ -14,6 +14,45 @@ body {
           flex-direction: column;
 }
 
+body div {
+  background: rgba(43, 26, 105, 0.203);
+}
+
+body div table tr th {
+  padding: .5rem 5rem .5rem .1rem;
+  text-align: left;
+  background: rgba(107, 80, 80, 0.486);
+  text-transform: uppercase;
+}
+
+body div table tr td {
+  padding: 1rem .1rem;
+}
+
+body div table tr:nth-child(2n) {
+  background: rgba(43, 26, 105, 0.103);
+}
+
+body div table tr .edit, body div table tr .delete {
+  margin: 0 .4rem;
+  text-decoration: none;
+  background: #4659ac;
+  color: white;
+  padding: .7rem;
+}
+
+body div table tr .delete {
+  background: #963232;
+}
+
+body div table tr .edit:hover {
+  background: #2b376e;
+}
+
+body div table tr .delete:hover {
+  background: #5f1c1c;
+}
+
 body form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,5 +81,9 @@ body form button {
   padding: .2rem;
   background: #329232;
   color: white;
+}
+
+body form button:hover {
+  background: #246824;
 }
 /*# sourceMappingURL=style.css.map */

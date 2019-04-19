@@ -3,7 +3,43 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    div {
+        background: rgba(43, 26, 105, 0.203);
+        table {
+            tr {
+                th {
+                    padding: .5rem 5rem .5rem .1rem;
+                    text-align: left;
+                    background: rgba(107, 80, 80, 0.486);
+                    text-transform: uppercase;
+                }
+            }
+            tr {
+                td {
+                    padding: 1rem .1rem;   
+                }
+                &:nth-child(2n){
+                    background:   rgba(43, 26, 105, 0.103);
+                }
+                .edit, .delete {
+                    margin: 0 .4rem;
+                    text-decoration: none;
+                    background: rgb(70, 89, 172);
+                    color: white;
+                    padding: .7rem;
+                }
+                .delete {
+                    background: rgb(150, 50, 50);
+                }
+                .edit:hover {
+                    background: rgb(43, 55, 110);
+                }
+                .delete:hover {
+                    background: rgb(95, 28, 28);
+                }
+            }
+        }
+    }
     form {
         display: flex;
         justify-content: center;
@@ -21,6 +57,10 @@ body {
             padding: .2rem; 
             background: rgb(50, 146, 50);
             color: white;
+        }
+        button:hover {
+            background: rgb(36, 104, 36);
+
         }
     }
 }
