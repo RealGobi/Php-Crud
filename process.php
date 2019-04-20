@@ -22,7 +22,7 @@ if(isset($_POST['save'])){
 
     #spara i session
     $_SESSION['messege'] = 'Användare är sparad';
-    $_SESSION['msg-type'] = 'Success';
+    $_SESSION['msg_type'] = 'success';
 
     #stanna kvar på index
     header('location: index.php');
@@ -38,7 +38,7 @@ if(isset($_GET['delete'])){
     
     #spara medelande och css i session
     $_SESSION['messege'] = 'Användare är bortagen';
-    $_SESSION['msg-type'] = 'Success';
+    $_SESSION['msg_type'] = 'success';
 
     #stanna kvar på index
     header('location: index.php');
@@ -48,10 +48,9 @@ if (isset($_GET['edit'])){
     $id = $_GET['edit'];
     $update = true;
     $result = $mysqli->query("SELECT * FROM data WHERE id=$id") or die($mysqli->error());
-   
-        $row = $result->fetch_array();
-        $name = $row['name'];
-        $location = $row['location'];
+    $row = $result->fetch_array();
+    $name = $row['name'];
+    $location = $row['location'];
     
 }
 #skicka in nya värden i db
@@ -63,7 +62,7 @@ if (isset($_POST['update'])){
 
     #spara medelande och css i session
     $_SESSION['messege'] = 'Användare är uppdaterad';
-    $_SESSION['msg-type'] = 'Success';
+    $_SESSION['msg_type'] = 'success';
 
     #stanna kvar på index
     header('location: index.php');

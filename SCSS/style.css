@@ -14,6 +14,15 @@ body {
           flex-direction: column;
 }
 
+body .success {
+  background: #2f71c7;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  max-width: 418px;
+  width: 75%;
+}
+
 body div {
   background: rgba(43, 26, 105, 0.203);
 }
