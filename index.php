@@ -9,7 +9,14 @@
 </head>
 <body>
 <?php require_once 'process.php'; ?>
+<?php if(isset($_SESSION['message'])); ?>
 
+<div class="<?=$_SESSION['msg_type']?>">
+<?php
+    echo $_SESSION['messege'];
+    unset($_SESSION['message']);
+?>
+</div>
 <?php
 
 $host = 'localhost';
@@ -18,9 +25,7 @@ $pass = '';
 $dbName = 'crud';
 $mysqli = new mysqli($host, $user, $pass, $dbName) or die(mysqli_error($mysqli));
 $result = $mysqli->query("SELECT * FROM data") or die($mysqli_error);
-#pre_r($result);
 ?>
-
     <div>
         <table>
             <thead>
@@ -52,9 +57,9 @@ function pre_r ($array){
 ?>
     <form action="process.php" method="post">
         <label>Name: </label>
-        <input type="text" name="name" value="Enter your name">
+        <input type="text" name="name" placeholder="Enter your name">
         <label>Location: </label>
-        <input type="text" name="location" value="Enter your location">
+        <input type="text" name="location" placeholder="Enter your location">
         <button type="submit" name="save">Save</button>
     </form>
 </body>
